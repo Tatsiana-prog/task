@@ -1,0 +1,14 @@
+.header {
+    padding: 40px 20px;    
+}
+.header__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__logo {
+    font-size: 25px;
+    color: black;
+    text-transform: uppercase;
+}
+

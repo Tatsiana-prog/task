@@ -1,0 +1,45 @@
+.modal-icon {
+    display: block;
+    position: relative;
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 100px;
+    border: 1px solid #000;
+    cursor: pointer;
+    &::before {
+        content: "";
+        position: absolute;
+        top:38%;
+        left: 31%;
+        width: 1.6rem;
+        height: 1.5px;
+        background: #000;
+        transition: all 0.7s ease-out;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        bottom:38%;
+        left: 31%;
+        width: 1.6rem;
+        height: 1.5px;
+        background: #000;
+        transition: all 0.7s ease-out;
+    }
+    
+}
+.modal-icon.modal-icon--active {
+    &::before {
+        top:50%;
+        transform: rotate(45deg);
+        transition: all 0.7s ease-out;
+    }
+    &::after {
+        top:50%;
+        transform: rotate(-45deg);
+        transition: all 0.7s ease-out;
+    }
+}
+
+
+

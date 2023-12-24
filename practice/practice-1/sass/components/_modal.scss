@@ -1,0 +1,222 @@
+
+.modal {
+    position: absolute;
+    display: none;
+    padding: 53px 97px;
+    background: #ffffff;
+    border-radius: 12px;
+    width: 754px;
+    top: 50%;
+    right: -100%;
+    animation: fadeIn 1s ease-out; /* Добавляем анимацию "fade in" */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Начальная прозрачность 0 */
+  }
+  to {
+    opacity: 1; /* Конечная прозрачность 1 */
+  }
+}
+
+.modal.modal--active {
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+
+
+.modal__header {
+    color: #0C1014;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 34px;
+    margin-bottom: 35px;
+}
+
+.input-container {
+    position: relative;
+}
+
+.label {
+    position: absolute;
+    top:8px;
+    left: 16px;
+    z-index: 15;
+    display: inline-block;
+    color: #6A6E72;
+    font-family: 'PT Sans';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.span-color {
+    color: #D90000;
+}
+
+.input-container {
+    margin-bottom: 32px;
+}
+
+.input {
+    width: 100%;
+    padding: 22px 16px 8px;
+    font-family: 'PT Sans';
+    font-size: 16px;
+    border: 1px solid rgba(214, 218, 222, 1);
+      &::placeholder {
+        color: #0C1014;
+        font-family: 'PT Sans';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+
+    }
+}
+
+form .input-container:nth-of-type(-n+3) {
+    /* задаем ширину первым трем input */
+    width: 362px;
+}
+
+form .input-container .label:nth-of-type(-n+4) {
+    position: absolute;
+    top:8px;
+    left: 16px;
+    display: flex;
+    align-items: center;
+    z-index: 15;
+}
+
+form .input-container:last-of-type {
+    /* margin-border для последнего элемента */
+   margin-bottom: 50px;
+}
+
+.icons {
+    position: absolute;
+    top:18px;
+    right: 19px;
+    width: 19px;
+    height: 19px;
+    display: block;
+}
+
+.vk {
+    display: block;
+    width: 19px;
+    height: 11px;
+    background: url(../../img/icons/icon-wk.svg) no-repeat center;
+    background-size: cover;
+}
+
+.fb {
+    display: block;
+    width: 9px;
+    height: 17px;
+    background: url(../../img/icons/icon-fb.svg) no-repeat center;
+    background-size: cover;
+}
+
+.inst {
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: url(../../img/icons/icon-inst.svg) no-repeat center;
+    background-size: cover;
+}
+
+.youtube {
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: url(../../img/icons/icon-yuotube.svg) no-repeat center;
+    background-size: cover;
+}
+
+.ok {
+    display: block;
+    width: 10px;
+    height: 18px;
+    background: url(../../img/icons/icon-ok.svg) no-repeat center;
+    background-size: cover;
+}
+
+.site {
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: url(../../img/icons/icon-site.svg) no-repeat center;
+    background-size: cover;
+}
+
+.ecology {
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: url(../../img/icons/icon-route.svg) no-repeat center;
+    background-size: cover;
+
+}
+
+.route {
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: url(../../img/icons/icon-site.svg) no-repeat center;
+    background-size: cover;
+}
+
+//загрузка logo
+.modal__form {
+    position: relative;
+}
+
+.logo__wrapper {
+    position: absolute;
+    top:0;
+    right: 0;
+}
+
+#image-container {   
+    width: 163px;
+    height: 163px;
+    background: url(../../img/logo-image.png) no-repeat center;
+    background-size: cover;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    color: #6A6E72;
+    font-family: 'PT Sans';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 7px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    display: none;
+}
+
+.overlay--active {
+    display: block;
+}
