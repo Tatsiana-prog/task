@@ -17,7 +17,7 @@ function fetchPosts() {
         th.classList.add('title');
         headerRow.appendChild(th);
       });
-      
+
       thead.appendChild(headerRow);
       table.appendChild(thead);
 
@@ -136,6 +136,5 @@ function fetchPosts() {
       console.error('Ошибка при получении данных:', error);
     });
 }
-
 // Вызываем функцию для получения и отображения данных
 fetchPosts();
