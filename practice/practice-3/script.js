@@ -2,6 +2,8 @@ function fetchPosts() {
   fetch('https://jsonplaceholder.typicode.com/posts')
     .then(response => response.json())
     .then(posts => {
+      const wrapper = document.querySelector('.wrapper'); // Получаем элемент с классом "wrapper"
+
       const table = document.createElement('table');
       const thead = document.createElement('thead');
       const tbody = document.createElement('tbody');
@@ -15,6 +17,7 @@ function fetchPosts() {
         th.classList.add('title');
         headerRow.appendChild(th);
       });
+      
       thead.appendChild(headerRow);
       table.appendChild(thead);
 
@@ -40,8 +43,8 @@ function fetchPosts() {
       });
       table.appendChild(tbody);
 
-      // Выводим таблицу на страницу
-      document.body.appendChild(table);
+      // Выводим таблицу внутри элемента с классом "wrapper"
+      wrapper.appendChild(table);
 
       // Получаем все строки таблицы
       const rows = Array.from(table.querySelectorAll('tbody tr'));
@@ -93,10 +96,46 @@ function fetchPosts() {
           }
         });
       });
+
+      // Создаем поисковую строку
+      const searchInput = document.createElement('input');
+      const minLength = 3;
+      const maxLength = 20;
+      searchInput.setAttribute('minlength', minLength);
+      searchInput.setAttribute('maxlength', maxLength);
+      searchInput.type = 'search';
+      searchInput.classList.add('input');
+      searchInput.placeholder = 'Введите текст для поиска';
+
+      wrapper.insertBefore(searchInput, table);
+
+      // Обработчик события ввода в поисковую строку
+      searchInput.addEventListener('input', () => {
+        const searchText = searchInput.value.trim().toLowerCase();
+
+        // Проверяем, что введено не менее 3 символов
+        if (searchText.length >= minLength) {
+          rows.forEach(row => {
+            const cells = Array.from(row.querySelectorAll('td'));
+            const rowText = cells.map(cell => cell.textContent.trim().toLowerCase());
+            if (rowText.some(text => text.includes(searchText))) {
+              row.style.display = '';
+            } else {
+              row.style.display = 'none';
+            }
+          });
+        } else {
+          // Если введено менее 3 символов, показываем все строки таблицы
+          rows.forEach(row => {
+            row.style.display = '';
+          });
+        }
+      });
     })
     .catch(error => {
       console.error('Ошибка при получении данных:', error);
     });
 }
+
 // Вызываем функцию для получения и отображения данных
 fetchPosts();
