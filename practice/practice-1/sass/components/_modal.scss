@@ -1,24 +1,27 @@
 
 .modal {
-    position: absolute;
+    position: fixed;
     display: none;
     padding: 53px 97px;
     background: #ffffff;
     border-radius: 12px;
     width: 754px;
     top: 50%;
-    right: -100%;
-    animation: fadeIn 1s ease-out; /* Добавляем анимацию "fade in" */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрируем модальное окно */
+    animation: fadeIn 1s ease-out;
+    z-index: 9999;
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0; /* Начальная прозрачность 0 */
-  }
-  to {
-    opacity: 1; /* Конечная прозрачность 1 */
-  }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
+
 
 .modal.modal--active {
     display: block;
@@ -115,7 +118,7 @@ form .input-container:last-of-type {
     display: block;
     width: 19px;
     height: 11px;
-    background: url(../../img/icons/icon-wk.svg) no-repeat center;
+    background: url(../img/icons/icon-wk.svg) no-repeat center;
     background-size: cover;
 }
 
@@ -123,7 +126,7 @@ form .input-container:last-of-type {
     display: block;
     width: 9px;
     height: 17px;
-    background: url(../../img/icons/icon-fb.svg) no-repeat center;
+    background: url(../img/icons/icon-fb.svg) no-repeat center;
     background-size: cover;
 }
 
@@ -131,7 +134,7 @@ form .input-container:last-of-type {
     display: block;
     width: 18px;
     height: 18px;
-    background: url(../../img/icons/icon-inst.svg) no-repeat center;
+    background: url(../img/icons/icon-inst.svg) no-repeat center;
     background-size: cover;
 }
 
@@ -139,7 +142,7 @@ form .input-container:last-of-type {
     display: block;
     width: 18px;
     height: 18px;
-    background: url(../../img/icons/icon-yuotube.svg) no-repeat center;
+    background: url(../img/icons/icon-yuotube.svg) no-repeat center;
     background-size: cover;
 }
 
@@ -147,7 +150,7 @@ form .input-container:last-of-type {
     display: block;
     width: 10px;
     height: 18px;
-    background: url(../../img/icons/icon-ok.svg) no-repeat center;
+    background: url(../img/icons/icon-ok.svg) no-repeat center;
     background-size: cover;
 }
 
@@ -155,7 +158,7 @@ form .input-container:last-of-type {
     display: block;
     width: 18px;
     height: 18px;
-    background: url(../../img/icons/icon-site.svg) no-repeat center;
+    background: url(../img/icons/icon-site.svg) no-repeat center;
     background-size: cover;
 }
 
@@ -163,7 +166,7 @@ form .input-container:last-of-type {
     display: block;
     width: 18px;
     height: 18px;
-    background: url(../../img/icons/icon-route.svg) no-repeat center;
+    background: url(../img/icons/icon-route.svg) no-repeat center;
     background-size: cover;
 
 }
@@ -172,7 +175,7 @@ form .input-container:last-of-type {
     display: block;
     width: 18px;
     height: 18px;
-    background: url(../../img/icons/icon-site.svg) no-repeat center;
+    background: url(../img/icons/icon-site.svg) no-repeat center;
     background-size: cover;
 }
 
@@ -185,13 +188,34 @@ form .input-container:last-of-type {
     position: absolute;
     top:0;
     right: 0;
+    z-index: 10000;
 }
 
-#image-container {   
+#image-container {
     width: 163px;
     height: 163px;
-    background: url(../../img/logo-image.png) no-repeat center;
-    background-size: cover;
+   // background-image: url("../img/logo-image.png");
+   // background-repeat: no-repeat;
+    //background-position: center;
+    //background-size: cover;
+    
+}
+
+#file-input {
+    display: none;
+}
+
+.label-logo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+#image-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .logo {

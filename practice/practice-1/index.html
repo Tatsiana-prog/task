@@ -85,8 +85,11 @@
 									<div class="logo__wrapper">
 										<p class="logo"><span class="span-color">&#10033;</span><span class="logo__text">Логотип(jpeg, png)</span></p>
 										<div id="image-container">
-											<input type="image" id="file-input" style="display: none;" alt="image">
-										</div>
+											<input type="file" id="file-input" accept="image/*" style="display: none;">
+											<label class="label-logo" for="file-input">
+											  <img id="image-preview" src="./img/logo-image.png" alt="Изображение">
+											</label>
+										  </div>
 									</div>
 								</form>
 						</div>
@@ -101,7 +104,8 @@
 				</div>
 			</section>
 		</div>
-		<script src="./js/modal.js"></script>		
 		<script src="./js/index.js"></script>
+		<script src="./js/modal.js"></script>		
+	
 	</body>
 </html>
