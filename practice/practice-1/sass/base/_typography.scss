@@ -9,6 +9,7 @@ html {
     /* sticky footer */
     scroll-behavior: smooth;
 }
+
 body {
     height: 100vh;
     display: -webkit-box;
@@ -20,7 +21,7 @@ body {
     font-size: 1.6rem;
     font-weight: 400;
     color: $color-white;
-    background:	#ebe1d3;
+    background: rgb(239, 248, 244);
     text-rendering: optimizeSpeed;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -29,13 +30,9 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
-
-
 body > * {
 	flex-shrink: 0; /* sticky footer */
 }
-
-
 
 /* Grid styles */
 
@@ -53,13 +50,14 @@ section {
     width: 100%;
     margin: 0 auto;
 }
+
 input {
     color: $color-black;
     font-weight: 600;
 }
+
 a {
     display: inline;
-   
 }
 
 /* Utility */
@@ -67,13 +65,16 @@ a {
 .none {
 	display: none !important;
 }
+
 .wrapper {
-    height: 100vh;
     position: relative;
     margin: 0 auto;
-    max-width: 1732px;
-    background: rgb(221, 244, 233); 
-  }
+    width: 1160px;
+    background: rgb(221, 244, 233);
+    border: 1px solid rgb(202, 247, 225);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+}
+
 .container {
     max-width: 1410px;
     padding: 0 15px;
@@ -84,17 +85,13 @@ h1 {
     font-size: 70px;
     text-transform: uppercase;
     color: black;
+    text-align: center;
 }
-
-
 
 h3 {
     font-size: 28px;
 }
+
 h4 {
     font-size: 20px;   
 }
-
-
-
-

@@ -91,7 +91,7 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   color: #ffffff;
-  background: #ebe1d3;
+  background: #eff8f4;
   text-rendering: optimizeSpeed;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -128,11 +128,12 @@ a {
   display: none !important; }
 
 .wrapper {
-  height: 100vh;
   position: relative;
   margin: 0 auto;
-  max-width: 1732px;
-  background: #ddf4e9; }
+  width: 1160px;
+  background: #ddf4e9;
+  border: 1px solid #caf7e1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 16px 20px rgba(0, 0, 0, 0.2); }
 
 .container {
   max-width: 1410px;
@@ -142,7 +143,8 @@ a {
 h1 {
   font-size: 70px;
   text-transform: uppercase;
-  color: black; }
+  color: black;
+  text-align: center; }
 
 h3 {
   font-size: 28px; }
@@ -414,6 +416,11 @@ form .input-container:last-of-type {
 
 .overlay--active {
   display: block; }
+
+body.modal.modal--active {
+  position: fixed;
+  width: 100%;
+  overflow-y: hidden; }
 
 .header {
   padding: 40px 20px; }

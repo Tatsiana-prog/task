@@ -21,77 +21,75 @@
 				<div class="container">
 					<div class="header__row">
 						<div class="header__logo">logo</div>
-						<div class="header__nav">
-							<nav></nav>
-						</div>
+						<div class="header__nav"><nav></nav></div>
 						<div class="header__modal">
 							<div class="modal-icon"></div>
 						</div>
 						<div class="overlay" id="overlay"></div>
 						<div class="modal">
-								<div class="modal__header">
-									<h3>Стать партнёром проекта</h3>
-								</div>
-								<form action="#" class="modal__form">
-									<div class="input-container">
-										<label class="label" for="name"><span class="span-color">&#10033;</span>Название организации</label>
+							<div class="modal__header">
+								<h3>Стать партнёром проекта</h3>
+							</div>
+							<form action="#" class="modal__form">
+								<div class="input-container">
+									<label class="label" for="name"><span class="span-color">&#10033;</span>Название организации</label>
 										<input type="text" class="input" id="name"  name="name"  placeholder="ABЦ" required autocomplete="off">
+								</div>
+								<div class="input-container">
+									<label class="label" for="tel"><span class="span-color">&#10033;</span><span class="label__text">Телефон</span></label>
+									<input type="tel" name="tel" class="input" id="tel" placeholder="+7 933 848-34-33" required>
+								</div>
+								<div class="input-container">
+									<label class="label" for="email"><span class="span-color">&#10033;</span><span class="label__text">E-mail</span></label>
+									<input type="email" name="email" class="input" id="email" placeholder="avc@gmail.com" required>
+								</div>
+								<div class="input-container">
+									<div class="icons"><span class="ecology"></span></div>
+									<label class=" label" for="route"><span class="span-color">&#10033;</span><span class="label__text">Направление</span></label>
+									<input  type="text" name="route" class="input" id="route" placeholder="Экология" required>
+								</div>
+								<div class="input-container">
+									<div class="icons"><span class="site"></span></div>
+									<input type="text" name="site" class="input" id="site" placeholder="avc.ru" required="required" autocomplete="off">
+								</div>
+								<div class="input-container">
+									<div class="icons"><span class="fb"></span></div>
+									<input type="text" name="vk" class="input" id="vk" placeholder="vk.com/shans" required="required" autocomplete="off">
+								</div>
+								<div class="input-container">
+									<div class="icons"><span class="ok"></span></div>
+									<input type="text" name="ok" class="input" id="ok" placeholder="ok.com/shans" required="required" autocomplete="off">
+								</div>
+								<div class="input-container">
+									<div class="icons"><span class="fb"></span></div>
+									<input type="text" name="facebook" class="input" id="facebook" placeholder="facebook.com/shans" required="required" autocomplete="off">
+								</div>
+								<div class="input-container">
+									<div class="icons"><span class="inst"></span></div>
+									<input type="text" name="instagram" class="input" id="instagram" placeholder="instagram.com/shans" required="required" autocomplete="off">
+								</div>
+								<div class="input-container">
+									<div class="icons"><span class="youtube"></span></div>
+									<input  type="text" name="youtube" class="input" id="youtube" placeholder="youtube.com/shans" required="required" autocomplete="off">
+								</div>
+								<div class="input-container">
+									<label class="label" for="manager"><span class="label__text">Руководитель</span></label>
+									<input type="text" name="manager" class="input" id="manager" placeholder="Александров Иван Васильевич" required="required" autocomplete="off">
+								</div>
+								<div class="buttons__wrapper">
+									<button type="submit"  class="button">Стать партнером проекта</button>
+									<button type="reset" class="btn-reset">Отменить</button>
+								</div>
+								<div class="logo__wrapper">
+									<p class="logo"><span class="span-color">&#10033;</span><span class="logo__text">Логотип(jpeg, png)</span></p>
+									<div id="image-container">
+										<input type="file" id="file-input" accept="image/*" style="display: none;">
+										<label class="label-logo" for="file-input">
+											<img id="image-preview" src="./img/logo-image.png" alt="Изображение">
+										</label>
 									</div>
-									<div class="input-container">
-										<label class="label" for="tel"><span class="span-color">&#10033;</span><span class="label__text">Телефон</span></label>
-										<input type="tel" name="tel" class="input" id="tel" placeholder="+7 933 848-34-33" required>
-									</div>
-									<div class="input-container">
-										<label class="label" for="email"><span class="span-color">&#10033;</span><span class="label__text">E-mail</span></label>
-										<input type="email" name="email" class="input" id="email" placeholder="avc@gmail.com" required>
-									</div>
-									<div class="input-container">
-										<div class="icons"><span class="ecology"></span></div>
-										<label class=" label" for="route"><span class="span-color">&#10033;</span><span class="label__text">Направление</span></label>
-										<input  type="text" name="route" class="input" id="route" placeholder="Экология" required>
-									</div>
-									<div class="input-container">
-										<div class="icons"><span class="site"></span></div>
-										<input type="text" name="site" class="input" id="site" placeholder="avc.ru" required="required" autocomplete="off">
-									</div>
-									<div class="input-container">
-										<div class="icons"><span class="fb"></span></div>
-										<input type="text" name="vk" class="input" id="vk" placeholder="vk.com/shans" required="required" autocomplete="off">
-									</div>
-									<div class="input-container">
-										<div class="icons"><span class="ok"></span></div>
-										<input type="text" name="ok" class="input" id="ok" placeholder="ok.com/shans" required="required" autocomplete="off">
-									</div>
-									<div class="input-container">
-										<div class="icons"><span class="fb"></span></div>
-										<input type="text" name="facebook" class="input" id="facebook" placeholder="facebook.com/shans" required="required" autocomplete="off">
-									</div>
-									<div class="input-container">
-										<div class="icons"><span class="inst"></span></div>
-										<input type="text" name="instagram" class="input" id="instagram" placeholder="instagram.com/shans" required="required" autocomplete="off">
-									</div>
-									<div class="input-container">
-										<div class="icons"><span class="youtube"></span></div>
-										<input  type="text" name="youtube" class="input" id="youtube" placeholder="youtube.com/shans" required="required" autocomplete="off">
-									</div>
-									<div class="input-container">
-										<label class="label" for="manager"><span class="label__text">Руководитель</span></label>
-										<input type="text" name="manager" class="input" id="manager" placeholder="Александров Иван Васильевич" required="required" autocomplete="off">
-									</div>
-									<div class="buttons__wrapper">
-										<button type="submit"  class="button">Стать партнером проекта</button>
-										<button type="reset" class="btn-reset">Отменить</button>
-									</div>
-									<div class="logo__wrapper">
-										<p class="logo"><span class="span-color">&#10033;</span><span class="logo__text">Логотип(jpeg, png)</span></p>
-										<div id="image-container">
-											<input type="file" id="file-input" accept="image/*" style="display: none;">
-											<label class="label-logo" for="file-input">
-											  <img id="image-preview" src="./img/logo-image.png" alt="Изображение">
-											</label>
-										  </div>
-									</div>
-								</form>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -105,7 +103,6 @@
 			</section>
 		</div>
 		<script src="./js/index.js"></script>
-		<script src="./js/modal.js"></script>		
-	
+		<script src="./js/modal.js"></script>
 	</body>
 </html>
