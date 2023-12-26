@@ -178,6 +178,18 @@ h4 {
   line-height: 24px;
   /* 150% */ }
 
+.image-reset {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  display: block;
+  width: 36px;
+  width: 36px;
+  border-radius: 50%;
+  background: #fff;
+  color: #6A6E72;
+  text-align: center; }
+
 .modal-icon {
   display: block;
   position: relative;
@@ -215,7 +227,7 @@ h4 {
   transition: all 0.7s ease-out; }
 
 .modal {
-  position: fixed;
+  position: absolute;
   display: none;
   padding: 53px 97px;
   background: #ffffff;
@@ -226,7 +238,8 @@ h4 {
   transform: translate(-50%, -50%);
   /* Центрируем модальное окно */
   animation: fadeIn 1s ease-out;
-  z-index: 9999; }
+  z-index: 9999;
+  overflow-y: scroll; }
 
 @keyframes fadeIn {
   from {
@@ -377,7 +390,8 @@ form .input-container:last-of-type {
 
 #image-container {
   width: 163px;
-  height: 163px; }
+  height: 163px;
+  border-radius: 50%; }
 
 #file-input {
   display: none; }
@@ -391,6 +405,7 @@ form .input-container:last-of-type {
 #image-preview {
   width: 100%;
   height: 100%;
+  border-radius: 50%;
   object-fit: cover; }
 
 .logo {
@@ -416,11 +431,6 @@ form .input-container:last-of-type {
 
 .overlay--active {
   display: block; }
-
-body.modal.modal--active {
-  position: fixed;
-  width: 100%;
-  overflow-y: hidden; }
 
 .header {
   padding: 40px 20px; }

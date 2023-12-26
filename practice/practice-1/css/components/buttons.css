@@ -24,4 +24,16 @@
   line-height: 24px;
   /* 150% */ }
 
+.image-reset {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  display: block;
+  width: 36px;
+  width: 36px;
+  border-radius: 50%;
+  background: #fff;
+  color: #6A6E72;
+  text-align: center; }
+
 /*# sourceMappingURL=buttons.css.map */
