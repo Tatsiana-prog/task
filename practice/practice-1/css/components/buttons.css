@@ -35,5 +35,7 @@
   background: #fff;
   color: #6A6E72;
   text-align: center; }
+  .image-reset:hover {
+    color: #3f4144; }
 
 /*# sourceMappingURL=buttons.css.map */

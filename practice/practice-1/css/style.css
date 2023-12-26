@@ -189,6 +189,8 @@ h4 {
   background: #fff;
   color: #6A6E72;
   text-align: center; }
+  .image-reset:hover {
+    color: #3f4144; }
 
 .modal-icon {
   display: block;

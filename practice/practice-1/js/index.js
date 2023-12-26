@@ -25,3 +25,24 @@ resetImage.addEventListener('click', function() {
   imagePreview.src = './img/logo-image.png'; // Очистить источник изображения 
   resetImage.style.display = 'none'; // Скрыть кнопку сброса
 });
+
+//telephone mask
+
+// Получаем поле ввода телефона
+var telInput = document.getElementById('tel');
+
+// Устанавливаем маску для поля ввода телефона
+telInput.addEventListener('input', function() {
+  var telValue = telInput.value;
+  
+  // Удаляем все символы, кроме цифр
+  telValue = telValue.replace(/\D/g, '');
+  
+  // Добавляем пробелы и дефисы в нужные позиции
+  if (telValue.length > 0) {
+    telValue = '+7 ' + telValue.slice(0, 3) + ' ' + telValue.slice(3, 6) + '-' + telValue.slice(6, 8) + '-' + telValue.slice(8, 10);
+  }
+  
+  // Устанавливаем отформатированное значение обратно в поле ввода
+  telInput.value = telValue;
+});
