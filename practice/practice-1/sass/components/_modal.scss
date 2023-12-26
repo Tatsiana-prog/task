@@ -1,5 +1,5 @@
 .modal {
-    position: fixed;
+    position: absolute;
     display: none;
     padding: 53px 97px;
     background: #ffffff;
@@ -10,6 +10,7 @@
     transform: translate(-50%, -50%); /* Центрируем модальное окно */
     animation: fadeIn 1s ease-out;
     z-index: 9999;
+    overflow-y: scroll;
 }
 
 @keyframes fadeIn {
@@ -191,6 +192,7 @@ form .input-container:last-of-type {
 #image-container {
     width: 163px;
     height: 163px;
+    border-radius: 50%;
 }
 
 #file-input {
@@ -207,6 +209,7 @@ form .input-container:last-of-type {
 #image-preview {
     width: 100%;
     height: 100%;
+    border-radius: 50%;
     object-fit: cover;
 }
 
@@ -237,8 +240,3 @@ form .input-container:last-of-type {
     display: block;
 }
 
-body.modal.modal--active {
-    position: fixed;
-    width: 100%;
-    overflow-y: hidden;
-  }
